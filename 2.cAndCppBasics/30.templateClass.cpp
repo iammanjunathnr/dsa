@@ -28,7 +28,15 @@ T Arithmetic<T>::add()
 template <class T>
 T Arithmetic<T>::subtract()
 {
-    T difference = a - b;
+    T difference;
+    if (a > b)
+    {
+        difference = a - b;
+    }
+    else
+    {
+        difference = b - a;
+    }
     return difference;
 }
 
@@ -43,6 +51,11 @@ int main()
 
     cout << "Sum: " << ar1.add() << endl;
     cout << "Difference: " << ar1.subtract() << endl;
+
+    Arithmetic<float> *ar2 = new Arithmetic<float>(1.52, 3.23);
+
+    cout << "Sum: " << ar2->add() << endl;
+    cout << "Difference: " << ar2->subtract() << endl;
 
     return 0;
 }
