@@ -13,3 +13,5 @@ int main(){
     fun(x);
     return 0;
 }
+
+//Forgot to change global git config
